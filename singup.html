@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Signup | Arogyam</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      overflow-x: hidden;
+      padding-top: 0;
+      background: linear-gradient(135deg, #f4fdfc, #e6fcf8);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 15px;
+    }
+
+    .signup-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    .signup-image {
+      flex: 1;
+      background: url('../img/singup.png') no-repeat center center;
+      background-size: cover;
+      min-height: 500px;
+    }
+
+    .signup-form {
+      flex: 1;
+      padding: 50px;
+    }
+
+    .signup-form h2 {
+      font-weight: bold;
+      color: #1ABC9C;
+      margin-bottom: 30px;
+    }
+
+    .form-control,
+    .form-select {
+      border-radius: 30px;
+      padding: 10px 20px;
+    }
+
+    .form-text {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+
+    .form-text a {
+      color: #1ABC9C;
+      text-decoration: none;
+    }
+
+    .form-text a:hover {
+      text-decoration: underline;
+    }
+
+    @media(max-width: 768px) {
+      .signup-wrapper {
+        flex-direction: column;
+      }
+
+      .signup-form {
+        padding: 40px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="signup-wrapper" data-aos="fade-up">
+    <div class="signup-image"></div>
+    <div class="signup-form">
+      <h2><i class="fas fa-user-plus me-2"></i>Create Account</h2>
+      <form>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Full Name">
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="form-control" placeholder="Email">
+          </div>
+          <div class="col-md-6">
+            <input type="tel" class="form-control" placeholder="Phone">
+          </div>
+          <div class="col-md-6">
+            <input type="date" class="form-control" placeholder="Date of Birth">
+          </div>
+          <div class="col-md-6">
+            <select class="form-select">
+              <option selected disabled>Gender</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <select class="form-select">
+              <option selected disabled>Blood Group</option>
+              <option>A+</option>
+              <option>B+</option>
+              <option>O+</option>
+              <option>AB+</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <input type="text" class="form-control" placeholder="Address">
+          </div>
+          <div class="col-md-6">
+            <input type="password" class="form-control" placeholder="Password">
+          </div>
+          <div class="col-md-6">
+            <input type="password" class="form-control" placeholder="Confirm Password">
+          </div>
+        </div>
+        <button type="submit" class="w-100 main-btn mt-4">Sign Up</button>
+      </form>
+      <div class="form-text">
+        Already have an account? <a href="login.html">Login here</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

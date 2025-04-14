@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointments | Arogyam</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      padding-top: 0;
+      background-color: #f4fdfc;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #1ABC9C, #16a085);
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+      border-radius: 0 0 40px 40px;
+    }
+
+    .appointment-card {
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      padding: 25px;
+      transition: 0.3s;
+    }
+
+    .appointment-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .appointment-header {
+      border-bottom: 1px solid #eee;
+      margin-bottom: 15px;
+    }
+
+    .status {
+      font-weight: bold;
+      padding: 5px 12px;
+      border-radius: 12px;
+    }
+
+    .status.pending { background-color: #fff3cd; color: #856404; }
+    .status.confirmed { background-color: #d4edda; color: #155724; }
+    .status.cancelled { background-color: #f8d7da; color: #721c24; }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero" data-aos="fade-down">
+    <h1><i class="fas fa-calendar-check me-2"></i>My Appointments</h1>
+    <p>Track and manage your upcoming and past appointments</p>
+    <button class="btn btn-light mt-3" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
+      <i class="fas fa-plus me-1"></i> Book New Appointment
+    </button>
+  </div>
+
+  <!-- Appointments List -->
+  <div class="container my-5">
+    <div class="row g-4">
+      <!-- Appointment Card -->
+      <div class="col-md-6" data-aos="fade-up">
+        <div class="appointment-card">
+          <div class="appointment-header d-flex justify-content-between align-items-center">
+            <h5 class="mb-0"><i class="fas fa-user-md me-2"></i>Dr. Aditi Sharma</h5>
+            <span class="status confirmed">Confirmed</span>
+          </div>
+          <p><i class="fas fa-hospital me-2"></i>Cardiology</p>
+          <p><i class="fas fa-calendar-alt me-2"></i>12 April 2025</p>
+          <p><i class="fas fa-clock me-2"></i>10:30 AM</p>
+          <p><i class="fas fa-map-marker-alt me-2"></i>Arogyam Main Clinic</p>
+        </div>
+      </div>
+
+      <!-- Another Appointment Card -->
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="appointment-card">
+          <div class="appointment-header d-flex justify-content-between align-items-center">
+            <h5 class="mb-0"><i class="fas fa-user-md me-2"></i>Dr. Ravi Mehra</h5>
+            <span class="status pending">Pending</span>
+          </div>
+          <p><i class="fas fa-hospital me-2"></i>Dermatology</p>
+          <p><i class="fas fa-calendar-alt me-2"></i>15 April 2025</p>
+          <p><i class="fas fa-clock me-2"></i>2:00 PM</p>
+          <p><i class="fas fa-map-marker-alt me-2"></i>Arogyam Skin Center</p>
+        </div>
+      </div>
+
+      <!-- Cancelled Appointment Card -->
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="appointment-card">
+          <div class="appointment-header d-flex justify-content-between align-items-center">
+            <h5 class="mb-0"><i class="fas fa-user-md me-2"></i>Dr. Nisha Verma</h5>
+            <span class="status cancelled">Cancelled</span>
+          </div>
+          <p><i class="fas fa-hospital me-2"></i>Orthopedics</p>
+          <p><i class="fas fa-calendar-alt me-2"></i>10 April 2025</p>
+          <p><i class="fas fa-clock me-2"></i>11:00 AM</p>
+          <p><i class="fas fa-map-marker-alt me-2"></i>Arogyam Joint Center</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Book Appointment Modal -->
+  <div class="modal fade" id="bookAppointmentModal" tabindex="-1" aria-labelledby="bookAppointmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <form method="post">
+          <div class="modal-header" style="background-color: #1ABC9C; color: white;">
+            <h5 class="modal-title" id="bookAppointmentModalLabel"><i class="fas fa-calendar-plus me-2"></i>Book New Appointment</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" data-aos="fade-in">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" placeholder="John Doe">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Phone</label>
+                <input type="text" class="form-control" placeholder="+91 98765 43210">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Department</label>
+                <select class="form-select">
+                  <option selected disabled>Select</option>
+                  <option>Cardiology</option>
+                  <option>Dermatology</option>
+                  <option>Orthopedics</option>
+                  <option>General Medicine</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Doctor</label>
+                <input type="text" class="form-control" placeholder="Dr. Aditi Sharma">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Date</label>
+                <input type="date" class="form-control">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Time</label>
+                <input type="time" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success" style="background-color:#1ABC9C;border: none;">
+              <i class="fas fa-check me-2"></i>Submit
+            </button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- space block -->
+   <div class="mt-5 mb-5 pt-5 pb-5 w-100"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

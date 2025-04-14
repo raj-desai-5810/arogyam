@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardiology Department | Arogyam</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      padding-top: 0 !important;
+      background: #f4fdfc;
+    }
+
+    .hero-section {
+      background: linear-gradient(to right, #1ABC9C, #16a085);
+      color: white;
+      padding: 80px 20px;
+      border-radius: 0 0 40px 40px;
+      text-align: center;
+    }
+
+    .hero-section h1 {
+      font-weight: 700;
+      font-size: 2.8rem;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #1ABC9C;
+      font-weight: bold;
+    }
+
+    .cardiology-image {
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .info-box {
+      min-height: 13.25rem;
+      background-color: white;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .info-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .info-box i {
+      color: #1ABC9C;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .info-box h5 {
+      font-weight: 600;
+      color: #1ABC9C;
+    }
+
+    @media (max-width:991px) {
+        .info-box {
+            min-height: 17.5rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+      .hero-section h1 {
+        font-size: 2rem;
+      }
+      .info-box {
+        min-height: max-content !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero-section" data-aos="fade-down">
+    <div class="container">
+      <h1><i class="fas fa-heartbeat me-2"></i>Cardiology Department</h1>
+      <p class="lead">Expert care for your heart – where compassion meets technology</p>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6" data-aos="fade-right">
+        <img src="img/dep1.jpg" alt="Cardiology" class="cardiology-image">
+      </div>
+      <div class="col-md-6" data-aos="fade-left">
+        <h2 class="section-title">About Our Department</h2>
+        <p>At Arogyam's Cardiology Department, we provide cutting-edge cardiac diagnostics, treatment, and surgical services delivered by top cardiologists and compassionate staff. Our facilities are equipped with modern technology to ensure the best outcomes for heart conditions ranging from hypertension to coronary artery disease.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="container my-5">
+    <h2 class="section-title" data-aos="fade-up">Our Services</h2>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="info-box text-center">
+          <i class="fas fa-stethoscope"></i>
+          <h5>Heart Checkups</h5>
+          <p>Routine screenings, ECG, and diagnostic tests for heart health monitoring.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="info-box text-center">
+          <i class="fas fa-heart"></i>
+          <h5>Cardiac Surgery</h5>
+          <p>Advanced surgical interventions including bypass and valve replacement.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="info-box text-center">
+          <i class="fas fa-pump-medical"></i>
+          <h5>Angioplasty & Stenting</h5>
+          <p>Minimally invasive procedures to treat narrowed or blocked arteries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- space block -->
+   <div class="w-100 mt-5 mb-5 pt-5 pb-5"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>

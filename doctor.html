@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Doctors | Arogyam</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      padding-top: 0;
+      background: linear-gradient(to bottom right, #f4fdfc, #e8f9f8);
+      color: #333;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #1ABC9C, #16a085);
+      color: white;
+      padding: 100px 20px 70px;
+      text-align: center;
+      border-radius: 0 0 40px 40px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+    }
+
+    .doctor-card {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+      overflow: hidden;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .doctor-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    }
+
+    .doctor-img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .doctor-info {
+      padding: 25px 20px;
+      text-align: center;
+    }
+
+    .doctor-name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .doctor-speciality {
+      color: #1ABC9C;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .doctor-bio {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    .main-btn{
+        text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero" data-aos="fade-down">
+    <div class="container">
+      <h1><i class="fas fa-user-md me-2"></i>Meet Our Expert Doctors</h1>
+      <p class="mt-2">Highly skilled, compassionate, and committed to your health</p>
+    </div>
+  </section>
+
+  <!-- Doctors List -->
+  <section class="container my-5">
+    <div class="row g-4">
+
+      <!-- Doctor Card -->
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+        <div class="doctor-card">
+          <img src="img/doctors-4.jpg" class="doctor-img" alt="Dr. Aditi Sharma">
+          <div class="doctor-info">
+            <div class="doctor-name">Dr. Aditi Sharma</div>
+            <div class="doctor-speciality">Cardiologist</div>
+            <p class="doctor-bio">12+ years of experience in managing heart diseases and preventive cardiology with a patient-first approach.</p>
+            <a href="appointment.html" class="main-btn"><i class="fas fa-calendar-check me-1"></i>Book Appointment</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Doctor Card -->
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+        <div class="doctor-card">
+          <img src="img/doctors-1.jpg" class="doctor-img" alt="Dr. Ravi Mehra">
+          <div class="doctor-info">
+            <div class="doctor-name">Dr. Ravi Mehra</div>
+            <div class="doctor-speciality">Dermatologist</div>
+            <p class="doctor-bio">Expert in treating chronic skin conditions and aesthetic procedures with over 8 years of experience.</p>
+            <a href="appointment.html" class="main-btn"><i class="fas fa-calendar-check me-1"></i>Book Appointment</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Doctor Card -->
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+        <div class="doctor-card">
+          <img src="img/doctors-2.jpg" class="doctor-img" alt="Dr. Nisha Verma">
+          <div class="doctor-info">
+            <div class="doctor-name">Dr. Nisha Verma</div>
+            <div class="doctor-speciality">Orthopedic Surgeon</div>
+            <p class="doctor-bio">Specializes in joint replacement and sports injuries. Trusted by 1000+ patients across India.</p>
+            <a href="appointment.html" class="main-btn"><i class="fas fa-calendar-check me-1"></i>Book Appointment</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

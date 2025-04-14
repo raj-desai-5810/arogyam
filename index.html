@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Arogyam</title>
+
+    <!-- link bootstrap CSS library -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> 
+
+    <!-- link font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- link favicon -->
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+
+    <!-- link external CSS files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+
+
+</head>
+<body>
+
+    <!-- this is navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+      <div class="container d-flex align-items-center">
+        <a class="navbar-brand me-auto" href="#">
+          <i class="fas fa-heartbeat me-2"></i>Arogyam
+        </a>
+        <div class="collapse navbar-collapse justify-content-center">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#departments">Departments</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-none d-lg-flex align-items-center gap-2">
+          <a href="appointment.html" class="secondery-btn">Book Appointment</a>
+          <a href="profile.html" class="secondery-btn">Profile</a>
+        </div>
+        <button class="navbar-toggler slide-menu-toggle ms-2" type="button" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  
+    <!-- Slide-in Menu -->
+    <div class="slide-menu" id="slideMenu">
+      <span class="close-btn" onclick="toggleMenu()"><i class="fas fa-times"></i></span>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#departments">Departments</a>
+      <a href="#contact">Contact</a>
+      <a href="appointment.html" class="btn appointment-btn">Book Appointment</a>
+      <a href="profile.html" class="main-btn">Profile</a>
+    </div>
+
+    <!-- this is hero section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Your Health, Our Priority</h1>
+        <p class="hero-para">Arogyam providos practical solutions and resources to help individuals improve their health and well-being. Arogyam also offers information and guidance on how to make positive changes in various aspects of health</p>
+        <a href="#" class="btn main-btn me-2"><i class="fa-solid fa-calendar-check me-1"></i> Book Appointment</a>
+        <a href="#" class="btn secondery-btn"><i class="fa-solid fa-user-doctor me-1"></i> Meet Our Doctors</a>
+      </div>
+    </section>
+
+    <!-- this is about section -->
+    <section id="about" class="py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          
+          <!-- Left Content -->
+          <div class="col-md-6">
+            <h2 class="fw-bold mb-3 tx-primary">About Arogyam</h2>
+            <p class="text-muted mb-3 tx-justify">
+              At Arogyam, we believe in transforming healthcare through innovation and compassion. Our mission is to make expert medical care accessible from the comfort of your home.
+            </p>
+            <p class="text-muted tx-justify">
+              Whether it's virtual consultations, lab tests, or ordering medicines online — Arogyam ensures seamless, secure, and personalized care for every patient.
+            </p>
+            <a href="#services" class="btn main-btn mt-3">Explore Services</a>
+          </div>
+
+          <!-- Right Image -->
+          <div class="col-md-6 text-center">
+            <img src="img/about.png" alt="About Arogyam" class="img-fluid rounded shadow-sm" style="max-height: 400px; object-fit: cover;">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- this is services section -->
+    <section id="services" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold tx-primary">Our Services</h2>
+          <p class="text-muted">We offer a wide range of online medical services to ensure your health is always a priority.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Service Card 1 -->
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0 text-center p-4">
+              <div class="tx-primary fs-1 mb-3"><i class="fas fa-user-md"></i></div>
+              <h5 class="fw-semibold">Online Consultations</h5>
+              <p class="text-muted">Connect with experienced doctors via secure video calls from the comfort of your home.</p>
+              <a href="#" class="text-decoration-none tx-primary fw-medium">Read more <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0 text-center p-4">
+              <div class="tx-primary fs-1 mb-3"><i class="fas fa-vials"></i></div>
+              <h5 class="fw-semibold">Lab Tests at Home</h5>
+              <p class="text-muted">Book blood tests and health packages with sample collection right at your doorstep.</p>
+              <a href="#" class="text-decoration-none tx-primary fw-medium">Read more <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0 text-center p-4">
+              <div class="tx-primary fs-1 mb-3"><i class="fas fa-prescription-bottle-alt"></i></div>
+              <h5 class="fw-semibold">Online Pharmacy</h5>
+              <p class="text-muted">Get your prescriptions and medications delivered quickly and safely to your home.</p>
+              <a href="#" class="text-decoration-none tx-primary fw-medium">Read more <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+
+          <!-- Service Card 4 -->
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0 text-center p-4">
+              <div class="tx-primary fs-1 mb-3"><i class="fas fa-user-nurse"></i></div>
+              <h5 class="fw-semibold">Nursing Care</h5>
+              <p class="text-muted">Access professional nursing services and support for post-surgery and chronic care at home.</p>
+              <a href="#" class="text-decoration-none tx-primary fw-medium">Read more <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+
+          <!-- Service Card 5 -->
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0 text-center p-4">
+              <div class="tx-primary fs-1 mb-3"><i class="fas fa-heartbeat"></i></div>
+              <h5 class="fw-semibold">Cardiac Care</h5>
+              <p class="text-muted">Heart health monitoring, consultations, and care plans from top cardiologists online.</p>
+              <a href="#" class="text-decoration-none tx-primary fw-medium">Read more <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+
+          <!-- Service Card 6 -->
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0 text-center p-4">
+              <div class="tx-primary fs-1 mb-3"><i class="fas fa-baby"></i></div>
+              <h5 class="fw-semibold">Pediatric Care</h5>
+              <p class="text-muted">Trusted child specialists to care for your little ones, from newborns to teens.</p>
+              <a href="#" class="text-decoration-none tx-primary fw-medium">Read more <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- departent section -->
+    <section id="departments" class="departments section bg-light">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="tx-primary">Departments</h2>
+        <p class="text-center">Explore our specialized departments for expert care in Cardiology, Neurology, Hepatology, Pediatrics, Eye Care, and more.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#departments-tab-1">Cardiology</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#departments-tab-2">Neurology</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#departments-tab-3">General Medicine</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#departments-tab-4">Pediatrics</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#departments-tab-5">Eye Care</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="departments-tab-1">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Cardiology</h3>
+                    <p class="fst-italic">The Cardiology Department at HealthUp provides comprehensive heart care with expert consultations, advanced diagnostics, and personalized treatment plans.</p>
+                    <p>Our specialists help manage conditions like hypertension, arrhythmias, and heart disease with remote monitoring and personalized advice. With advanced technology and a patient-first approach.</p>
+                    <a href="/cardiology" style="text-decoration: underline;">View More</a>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="img/dep1.jpg" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="departments-tab-2">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Neurology</h3>
+                    <p class="fst-italic">The Neurology Department at HealthUp provides expert care for brain, nerve, and spinal disorders through online consultations and advanced diagnostics.</p>
+                    <p>Our specialists treat conditions like migraines, epilepsy, stroke, and neurological disorders with personalized care plans. With remote monitoring and expert guidance, we ensure timely diagnosis and effective treatment to improve brain health and overall well-being.</p>
+                    <a href="/neurology" style="text-decoration: underline;">View More</a>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="img/dep2.jpg" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="departments-tab-3">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>General Medicine</h3>
+                    <p class="fst-italic">Comprehensive primary care and internal medicine for everyday health issues.</p>
+                    <p>General Medicine focuses on the diagnosis and treatment of common health issues like infections, fever, diabetes, and hypertension. It provides primary care and helps manage overall wellness with personalized medical advice and preventive care.</p>
+                    <a href="/hepatology" style="text-decoration: underline;">View More</a>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="img/dep3.jpg" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="departments-tab-4">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Pediatrics</h3>
+                    <p class="fst-italic">The Pediatrics Department at HealthUp offers expert healthcare for infants, children, and adolescents through online consultations and remote monitoring.</p>
+                    <p>Our pediatricians provide treatment for common childhood illnesses, growth and development concerns, vaccinations, and nutrition guidance. With a child-friendly approach, we ensure comprehensive and compassionate care for your little ones.</p>
+                    <a href="/pediatrics" style="text-decoration: underline;">View More</a>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="img/dep4.jpg" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="departments-tab-5">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Eye Care</h3>
+                    <p class="fst-italic">The Eye Care Department at HealthUp provides expert diagnosis and treatment for vision and eye health issues through online consultations.</p>
+                    <p>Our specialists offer care for conditions like dry eyes, infections, refractive errors, and early detection of cataracts or glaucoma. With personalized guidance and remote eye health assessments, we help you maintain clear and healthy vision.</p>
+                    <a href="/eye-care" style="text-decoration: underline;">View More</a>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="img/dep5.jpg" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- this is galary section -->
+    <section id="gallery" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold tx-primary">Our Gallery</h2>
+          <p class="text-muted">A glimpse into our care, compassion, and commitment to your health.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="gallery-img-wrapper overflow-hidden rounded shadow-sm">
+              <img src="img/gallery1.jpg" class="img-fluid gallery-img" alt="Gallery Image 1">
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="gallery-img-wrapper overflow-hidden rounded shadow-sm">
+              <img src="img/gallery2.jpg" class="img-fluid gallery-img" alt="Gallery Image 2">
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="gallery-img-wrapper overflow-hidden rounded shadow-sm">
+              <img src="img/gallery3.jpg" class="img-fluid gallery-img" alt="Gallery Image 3">
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="gallery-img-wrapper overflow-hidden rounded shadow-sm">
+              <img src="img/gallery4.jpg" class="img-fluid gallery-img" alt="Gallery Image 4">
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="gallery-img-wrapper overflow-hidden rounded shadow-sm">
+              <img src="img/gallery5.jpg" class="img-fluid gallery-img" alt="Gallery Image 5">
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="gallery-img-wrapper overflow-hidden rounded shadow-sm">
+              <img src="img/gallery6.jpg" class="img-fluid gallery-img" alt="Gallery Image 6">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- this counter section -->
+    <section id="counters" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold tx-primary" data-aos="fade-up">Our Achievements</h2>
+          <p class="text-muted" data-aos="fade-up" data-aos-delay="100">We are proud to serve our patients with dedication and care.</p>
+        </div>
+
+        <div class="row text-center g-4">
+          
+          <!-- Patients -->
+          <div class="col-md-3" data-aos="zoom-in">
+            <div class="card border-0 shadow h-100 py-4 px-2">
+              <div class="card-body">
+                <div class="mb-3">
+                  <i class="fa-solid fa-users fa-3x tx-primary"></i>
+                </div>
+                <h3 class="fw-bold"><span class="counter" data-count="5000">0</span>+</h3>
+                <h6 class="text-uppercase fw-semibold">Patients</h6>
+                <p class="text-muted small">Trusted by thousands of patients across the country for online care.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Doctors -->
+          <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card border-0 shadow h-100 py-4 px-2">
+              <div class="card-body">
+                <div class="mb-3">
+                  <i class="fa-solid fa-user-doctor fa-3x tx-primary"></i>
+                </div>
+                <h3 class="fw-bold"><span class="counter" data-count="150">0</span>+</h3>
+                <h6 class="text-uppercase fw-semibold">Doctors</h6>
+                <p class="text-muted small">Experienced and certified doctors across 10+ specialties.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Appointments -->
+          <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card border-0 shadow h-100 py-4 px-2">
+              <div class="card-body">
+                <div class="mb-3">
+                  <i class="fa-solid fa-calendar-check fa-3x tx-primary"></i>
+                </div>
+                <h3 class="fw-bold"><span class="counter" data-count="1200">0</span>+</h3>
+                <h6 class="text-uppercase fw-semibold">Appointments</h6>
+                <p class="text-muted small">Hassle-free online booking and consultation at your fingertips.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Departments -->
+          <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
+            <div class="card border-0 shadow h-100 py-4 px-2">
+              <div class="card-body">
+                <div class="mb-3">
+                  <i class="fa-solid fa-hospital-user fa-3x tx-primary"></i>
+                </div>
+                <h3 class="fw-bold"><span class="counter" data-count="12">0</span>+</h3>
+                <h6 class="text-uppercase fw-semibold">Departments</h6>
+                <p class="text-muted small">A wide range of medical departments offering comprehensive care.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- this is contact section -->
+    <section id="contact" class="contact section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="mt-4">Contact</h2>
+        <p>Get in touch with us for any inquiries, support, or assistance – we're here to help!</p>
+      </div>
+    
+      <!-- Google Maps Embed -->
+      <div class="mb-5" data-aos="fade-up" data-aos-delay="200">
+        <iframe class="gmap_iframe" style="border:0; width: 100%; height: 270px;" frameborder="0" scrolling="no" 
+        marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Bhildi 365620&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+      </div>
+    
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          <!-- Contact Info Items -->
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <h3>Location</h3>
+                <p>123 Health St, MedCity, India</p>
+              </div>
+            </div>
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>+91 78628 03891</p>
+              </div>
+            </div>
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>support@arogyam.com</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Contact Form -->
+          <div class="col-lg-8">
+            <form method="post" class="contact-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="col-md-12">
+                  <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                </div>
+                <div class="col-md-12">
+                  <textarea name="message" class="form-control" rows="5" placeholder="Message" required></textarea>
+                </div>
+                <div class="col-md-12 text-center">
+                  <button type="submit" class="main-btn">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- this is footer -->
+    <footer class="footer bg-dark text-white pt-5 pb-4 mt-4">
+      <div class="container">
+        <div class="row g-5">
+
+          <!-- Brand + Description -->
+          <div class="col-lg-4 col-md-6">
+            <h4 class="fw-bold text-white mb-3">
+              <i class="fa-solid fa-heart-pulse me-2 tx-primary"></i> Arogyam
+            </h4>
+            <p class="text-light">
+              At Arogyam, we combine expertise with empathy to provide world-class online healthcare services at your fingertips.
+            </p>
+            <div class="d-flex gap-3 mt-4">
+              <a href="#" class="text-white fs-5"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="text-white fs-5"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-white fs-5"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="text-white fs-5"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-2 col-md-6">
+            <h5 class="text-white fw-semibold">Quick Links</h5>
+            <ul class="list-unstyled mt-3">
+              <li><a href="#" class="footer-link">Home</a></li>
+              <li><a href="#about" class="footer-link">About</a></li>
+              <li><a href="#services" class="footer-link">Services</a></li>
+              <li><a href="#departments" class="footer-link">Departments</a></li>
+              <li><a href="#contact" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Our Services -->
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-white fw-semibold">Top Services</h5>
+            <ul class="list-unstyled mt-3">
+              <li><a href="#" class="footer-link">Online Consultations</a></li>
+              <li><a href="#" class="footer-link">Lab Test Booking</a></li>
+              <li><a href="#" class="footer-link">Home Nursing</a></li>
+              <li><a href="#" class="footer-link">Medicine Delivery</a></li>
+              <li><a href="/appointment" class="footer-link">Online Appointment</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-white fw-semibold">Get In Touch</h5>
+            <ul class="list-unstyled mt-3 text-light">
+              <li class="mb-2"><i class="fa-solid fa-phone me-2 tx-primary"></i> +91 78628 03891</li>
+              <li class="mb-2"><i class="fa-solid fa-envelope me-2 tx-primary"></i> support@arogyam.com</li>
+              <li><i class="fa-solid fa-location-dot me-2 tx-primary"></i> MedCity, India – 400001</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Bottom -->
+        <hr class="text-secondary mt-5" />
+        <div class="text-center">
+          <small class="text-light">&copy; 2025 Arogyam. All rights reserved. Crafted with ❤️ for better health.</small>
+          <br>
+          <small style="color: var(--bs-gray-600);">Develop by Raj Desai</small>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+
+    <!-- link bootstrap JS bundel -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- navbar JS -->
+    <script>
+      function toggleMenu() {
+        document.getElementById('slideMenu').classList.toggle('active');
+      }
+    </script>
+    
+    
+
+</body>
+</html>
