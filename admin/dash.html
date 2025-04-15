@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+       :root {
+      --primary-color: #1ABC9C;
+      --text-color: #ffffff;
+      --bg-color: #f8f9fa;
+    }
+
+    body {
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .sidebar {
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      padding: 2rem 1rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 240px;
+      transition: transform 0.3s ease;
+      z-index: 1030;
+    }
+
+    .sidebar h4 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    .sidebar a {
+      color: var(--text-color);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 1rem 0;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .content-area {
+      margin-left: 240px;
+      padding: 2rem;
+    }
+
+    .card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .summary-box {
+      background-color: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+
+    .summary-icon {
+      font-size: 2rem;
+      line-height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    .summary-content h6 {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    .summary-content h3 {
+      margin: 0;
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      color: var(--primary-color);
+    }
+
+    .btn-delete {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 0.35rem 0.75rem;
+      font-size: 0.85rem;
+      border-radius: 4px;
+    }
+
+    .table-section {
+      overflow-x: auto;
+    }
+
+    .table thead {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+      background-color: #f1fdfc;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        transform: translateX(-100%);
+        position: fixed;
+      }
+
+      .sidebar.active {
+        transform: translateX(0);
+      }
+
+      .content-area {
+        margin-left: 0;
+        padding: 1rem;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 sidebar" id="sidebar">
+            <h4>Admin Panel</h4>
+            <a href="#"><i class="fas fa-chart-line"></i> Dashboard</a>
+            <a href="#"><i class="fas fa-user-md"></i> Doctors</a>
+            <a href="#"><i class="fas fa-users"></i> Patients</a>
+            <a href="#"><i class="fas fa-calendar-check"></i> Appointments</a>
+            <a href="#"><i class="fas fa-image"></i> Gallery</a>
+            <a href="#"><i class="fas fa-cog"></i> Settings</a>
+        </nav>
+
+      <main class="col-md-10 content-area">
+        <h2 class="mb-4">Dashboard Overview</h2>
+
+        <div class="row mb-4 g-4">
+            <div class="col-md-3">
+              <div class="summary-box">
+                <div class="summary-icon"><i class="fas fa-user-md"></i></div>
+                <div class="summary-content">
+                  <h6>Total Doctors</h6>
+                  <h3>36</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="summary-box">
+                <div class="summary-icon"><i class="fas fa-users"></i></div>
+                <div class="summary-content">
+                  <h6>Total Patients</h6>
+                  <h3>120</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="summary-box">
+                <div class="summary-icon"><i class="fas fa-calendar-check"></i></div>
+                <div class="summary-content">
+                  <h6>Appointments</h6>
+                  <h3>14</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="summary-box">
+                <div class="summary-icon"><i class="fas fa-dollar-sign"></i></div>
+                <div class="summary-content">
+                  <h6>Seek Support</h6>
+                  <h3>12</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="row mb-4">
+          <div class="col-md-6 mb-4">
+            <div class="card p-3">
+              <h5>Website Visits</h5>
+              <canvas id="visitsChart"></canvas>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card p-3">
+              <h5>Revenue Growth</h5>
+              <canvas id="revenueChart"></canvas>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card p-3">
+              <h5>Appointments Status</h5>
+              <canvas id="appointmentsChart"></canvas>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card p-3">
+              <h5>User Registrations</h5>
+              <canvas id="usersChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="card p-4 mb-4">
+          <h5>User Information</h5>
+          <div class="table-section">
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Username</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Joined Date</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Alice</td>
+                  <td>alice@example.com</td>
+                  <td>Patient</td>
+                  <td>2024-04-01</td>
+                  <td><button class="btn-delete">Delete</button></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Bob</td>
+                  <td>bob@example.com</td>
+                  <td>Doctor</td>
+                  <td>2024-03-20</td>
+                  <td><button class="btn-delete">Delete</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    new Chart(document.getElementById('visitsChart'), {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr'],
+        datasets: [{
+          label: 'Visits',
+          data: [120, 190, 300, 500],
+          borderColor: '#1ABC9C',
+          tension: 0.3,
+          fill: false
+        }]
+      },
+      options: { responsive: true }
+    });
+
+    new Chart(document.getElementById('revenueChart'), {
+      type: 'bar',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr'],
+        datasets: [{
+          label: 'Revenue',
+          data: [1000, 1400, 1300, 1700],
+          backgroundColor: '#1ABC9C'
+        }]
+      },
+      options: { responsive: true }
+    });
+
+    new Chart(document.getElementById('appointmentsChart'), {
+      type: 'pie',
+      data: {
+        labels: ['Completed', 'Pending', 'Cancelled'],
+        datasets: [{
+          data: [50, 25, 10],
+          backgroundColor: ['limegreen', 'orange', 'red']
+        }]
+      },
+      options: { responsive: true }
+    });
+
+    new Chart(document.getElementById('usersChart'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Doctors', 'Patients'],
+        datasets: [{
+          data: [60, 40],
+          backgroundColor: ['#3498db', '#2ecc71']
+        }]
+      },
+      options: { responsive: true }
+    });
+  </script>
+
+  <!-- sidebar JS -->
+
+  <script>
+    let startX = 0;
+    let sidebar = document.getElementById("sidebar");
+
+    window.addEventListener("touchstart", function (e) {
+      startX = e.touches[0].clientX;
+    });
+
+    window.addEventListener("touchend", function (e) {
+      const endX = e.changedTouches[0].clientX;
+      const deltaX = endX - startX;
+
+      if (startX < 50 && deltaX > 100 && window.innerWidth < 768) {
+        sidebar.classList.add("active");
+      } else if (deltaX < -100 && window.innerWidth < 768) {
+        sidebar.classList.remove("active");
+      }
+    });
+  </script>
+
+</body>
+</html>
